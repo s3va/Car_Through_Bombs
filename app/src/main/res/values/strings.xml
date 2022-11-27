@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Proto Data Store Application</string>
+    <string name="car_to_drive">Car to drive</string>
+    <string name="right_button">Right button</string>
+    <string name="left_button">Left button</string>
+    <string name="start_and_stop_button">start and stop button</string>
+</resources>

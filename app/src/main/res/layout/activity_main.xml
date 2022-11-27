@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/lifes_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="life_three_iv,life_two_iv,life_one_iv"
+        app:flow_horizontalBias="1"
+        app:flow_horizontalGap="2dp"
+        app:flow_horizontalStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/life_one_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        app:tint="@android:color/holo_red_light" />
+
+    <ImageView
+        android:id="@+id/life_two_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        app:tint="@android:color/holo_red_light" />
+
+    <ImageView
+        android:id="@+id/life_three_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        app:tint="@android:color/holo_red_light" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/bombers_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lifes_flow"
+
+        />
+
+    <ImageView
+        android:id="@+id/carIv"
+        android:layout_width="32dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/car_to_drive"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/startStopBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/car_topview" />
+
+    <Button
+        android:id="@+id/arrowRightBtn"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/right_button"
+        android:scaleType="fitXY"
+        app:icon="@drawable/ic_baseline_east_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/startStopBtn"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/start_and_stop_button"
+        app:icon="@drawable/ic_baseline_not_started_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/arrowRightBtn"
+        app:layout_constraintStart_toEndOf="@id/arrowLeftBtn" />
+
+    <Button
+        android:id="@+id/arrowLeftBtn"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/left_button"
+        android:scaleType="fitXY"
+        app:icon="@drawable/ic_baseline_west_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
